@@ -7,6 +7,10 @@ def convert_file(
     target_path: Path | None = None,
 ) -> None:
 
+    print(
+        f"Processing file: '{source_path}'...",
+    )
+
     heif_file = Image.open(
         fp=source_path,
     )
@@ -17,4 +21,8 @@ def convert_file(
 
     jpeg_file.save(
         fp=target_path,
+    )
+
+    print(
+        f"Processing complete! Output saved here: '{target_path}'",
     )

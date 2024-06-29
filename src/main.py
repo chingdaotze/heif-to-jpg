@@ -6,6 +6,10 @@ from heif_to_jpg.convert_directory import convert_directory
 
 def main() -> None:
 
+    print(
+        "Starting app...",
+    )
+
     # Get directories
     heif_dir = get_directory(
         file_dialog_title="*.heif Input Directory",
@@ -19,6 +23,10 @@ def main() -> None:
     convert_directory(
         source_dir=heif_dir,
         target_dir=jpeg_dir,
+    )
+
+    print(
+        "Done!",
     )
 
     showinfo(
